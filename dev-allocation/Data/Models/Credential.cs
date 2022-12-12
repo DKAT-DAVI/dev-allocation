@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dev_allocation.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace dev_allocation
 {
@@ -90,7 +92,38 @@ namespace dev_allocation
             return hash;
         }
         #endregion
-        
+
+        /// Method to authenticate user login
+        public static Boolean AuthenticateDeveloper(String email, String password)
+        {
+            Developer developer = DeveloperRepository.FindDeveloperByEmail(email);
+
+            /// If email exists in database...
+            if (developer != null)
+            {
+                /// ... autheticate the password.
+                String passwordInDatabase = developer.Credential.Password;
+                password = ComputeSHA256(password);
+
+                if (passwordInDatabase == password)
+                {
+                    return true;
+                }
+                else
+                {
+                    /// Return a error Message to the user
+                    MessageBox.Show("The password you entered is wrong, please try again", "PASSWORD WRONG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
+                }
+            }
+            else
+            {
+                /// Return a error Message to the user
+                MessageBox.Show("The email you entered is wrong, please try again", "EMAIL WRONG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+        }
+
     }
 }
 

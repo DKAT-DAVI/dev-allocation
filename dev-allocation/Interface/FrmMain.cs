@@ -27,5 +27,10 @@ namespace dev_allocation
         {
             InitializeComponent();
         }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            FrmLogin.GetInstance().Show();
+        }
     }
 }

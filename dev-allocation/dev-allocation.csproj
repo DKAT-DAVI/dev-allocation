@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DeveloperRepository.cs" />
     <Compile Include="Data\Models\Allocation.cs" />
     <Compile Include="Data\Models\Credential.cs" />
     <Compile Include="Data\Models\Developer.cs" />

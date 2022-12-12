@@ -68,12 +68,11 @@ namespace dev_allocation
 
             this.ActiveControl = lblAcessForm;
 
-            txbUser.Text = "Email";
-            txbUser.ForeColor = Color.Gray;
+            txbEmail.Text = "Email";
+            txbEmail.ForeColor = Color.Gray;
 
             txbPassword.Text = "Password";
             txbPassword.ForeColor = Color.Gray;
-
         }
         //--//
 
@@ -113,24 +112,24 @@ namespace dev_allocation
 
         //-- txbUser
         //-- Placeholder
-        private void txbUser_Enter(object sender, EventArgs e)
+        private void txbEmail_Enter(object sender, EventArgs e)
         {
-            if (txbUser.Text == "Email")
+            if (txbEmail.Text == "Email")
             {
-                txbUser.Text = "";
-                txbUser.ForeColor = Color.Black;
+                txbEmail.Text = "";
+                txbEmail.ForeColor = Color.Black;
             }
         }
-        private void txbUser_Leave(object sender, EventArgs e)
+        private void txbEmail_Leave(object sender, EventArgs e)
         {
-            if (txbUser.Text == "")
+            if (txbEmail.Text == "")
             {
-                txbUser.Text = "Email";
-                txbUser.ForeColor = Color.Gray;
+                txbEmail.Text = "Email";
+                txbEmail.ForeColor = Color.Gray;
             }
         }
         //-- Switch field
-        private void txbUser_KeyUp(object sender, KeyEventArgs e)
+        private void txbEmail_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -191,7 +190,17 @@ namespace dev_allocation
         // Click
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funfou");
+            if(Credential.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text))
+            {
+                this.Hide();
+                FrmMain.GetInstance().Show();
+
+                txbEmail.Text = "Email";
+                txbEmail.ForeColor = Color.Gray;
+                txbPassword.Text = "Password";
+                txbPassword.ForeColor = Color.Gray;
+                txbPassword.UseSystemPasswordChar = false;
+            }
         }
         //--//
 
@@ -208,7 +217,6 @@ namespace dev_allocation
         }
 
         //--//
-
 
     }
 }

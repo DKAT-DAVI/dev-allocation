@@ -37,7 +37,7 @@
             this.lblAcessForm = new System.Windows.Forms.Label();
             this.ptbUser = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txbUser = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.pnlControlbox = new System.Windows.Forms.Panel();
             this.ptbMinimize = new System.Windows.Forms.PictureBox();
@@ -100,7 +100,7 @@
             this.pnlForm.Controls.Add(this.lblAcessForm);
             this.pnlForm.Controls.Add(this.ptbUser);
             this.pnlForm.Controls.Add(this.btnLogin);
-            this.pnlForm.Controls.Add(this.txbUser);
+            this.pnlForm.Controls.Add(this.txbEmail);
             this.pnlForm.Controls.Add(this.txbPassword);
             this.pnlForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
             this.pnlForm.Location = new System.Drawing.Point(422, 88);
@@ -147,6 +147,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(9)))));
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
@@ -160,16 +161,16 @@
             this.btnLogin.MouseEnter += new System.EventHandler(this.btnLogin_MouseEnter);
             this.btnLogin.MouseLeave += new System.EventHandler(this.btnLogin_MouseLeave);
             // 
-            // txbUser
+            // txbEmail
             // 
-            this.txbUser.Font = new System.Drawing.Font("Consolas", 14F);
-            this.txbUser.Location = new System.Drawing.Point(13, 176);
-            this.txbUser.Name = "txbUser";
-            this.txbUser.Size = new System.Drawing.Size(232, 29);
-            this.txbUser.TabIndex = 0;
-            this.txbUser.Enter += new System.EventHandler(this.txbUser_Enter);
-            this.txbUser.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbUser_KeyUp);
-            this.txbUser.Leave += new System.EventHandler(this.txbUser_Leave);
+            this.txbEmail.Font = new System.Drawing.Font("Consolas", 14F);
+            this.txbEmail.Location = new System.Drawing.Point(13, 176);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(232, 29);
+            this.txbEmail.TabIndex = 0;
+            this.txbEmail.Enter += new System.EventHandler(this.txbEmail_Enter);
+            this.txbEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbEmail_KeyUp);
+            this.txbEmail.Leave += new System.EventHandler(this.txbEmail_Leave);
             // 
             // txbPassword
             // 
@@ -277,7 +278,7 @@
         private System.Windows.Forms.Label lblAcessForm;
         private System.Windows.Forms.PictureBox ptbUser;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txbUser;
+        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbPassword;
     }
 }
