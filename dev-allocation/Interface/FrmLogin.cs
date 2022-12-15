@@ -66,6 +66,7 @@ namespace dev_allocation
             // Starting the database connection
             Repository dbContext = new Repository();
 
+            // Remove focus from textbox
             this.ActiveControl = lblAcessForm;
 
             txbEmail.Text = "Email";
@@ -75,7 +76,6 @@ namespace dev_allocation
             txbPassword.ForeColor = Color.Gray;
         }
         //--//
-
 
         //-- ControlBox
         //-- ptbClose
@@ -200,6 +200,9 @@ namespace dev_allocation
                 txbPassword.Text = "Password";
                 txbPassword.ForeColor = Color.Gray;
                 txbPassword.UseSystemPasswordChar = false;
+
+                // Remove focus from textbox
+                this.ActiveControl = lblAcessForm;
             }
         }
         //--//
@@ -215,6 +218,8 @@ namespace dev_allocation
         {
             lblNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
         }
+
+
 
         //--//
 
