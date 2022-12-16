@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dev_allocation.Data.Repositorys;
+using dev_allocation.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +13,11 @@ using System.Windows.Forms;
 
 namespace dev_allocation
 {
-    public partial class FrmLogin : Form
+    internal partial class FrmLogin : Form
     {
+        // Store de logged dev
+        public static Developer DevLoggedIn { get; set; }
+
         #region Singleton in the window
         private static FrmLogin _instance;
         public static FrmLogin GetInstance()
@@ -36,15 +41,6 @@ namespace dev_allocation
         public static extern bool ReleaseCapture();
 
         private void pnlControlBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-
-        private void pnlLogin_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -86,11 +82,11 @@ namespace dev_allocation
         //-- MouseHover
         private void ptbClose_MouseEnter(object sender, EventArgs e)
         {
-            ptbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            ptbClose.BackColor = System.Drawing.Color.FromArgb(32, 35, 66);
         }
         private void ptbClose_MouseLeave(object sender, EventArgs e)
         {
-            ptbClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
+            ptbClose.BackColor = System.Drawing.Color.FromArgb(17, 16, 52);
         }
 
         //-- ptbMinimize
@@ -101,11 +97,11 @@ namespace dev_allocation
         //-- MouseHover
         private void ptbMinimize_MouseEnter(object sender, EventArgs e)
         {
-            ptbMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            ptbMinimize.BackColor = System.Drawing.Color.FromArgb(32, 35, 66);
         }
         private void ptbMinimize_MouseLeave(object sender, EventArgs e)
         {
-            ptbMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
+            ptbMinimize.BackColor = System.Drawing.Color.FromArgb(17, 16, 52);
         }
         //--//
 
@@ -178,19 +174,20 @@ namespace dev_allocation
         // MouseHover
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
-            btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(20)))));
+            btnLogin.BackColor = System.Drawing.Color.FromArgb(5, 5, 20);
             btnLogin.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
         }
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(9)))));
+            btnLogin.BackColor = System.Drawing.Color.FromArgb(4, 4, 9);
             btnLogin.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold);
         }
 
         // Click
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(Credential.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text))
+            Boolean authenticate = CredentialRepository.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text);
+            if (authenticate)
             {
                 this.Hide();
                 FrmMain.GetInstance().Show();
@@ -204,6 +201,10 @@ namespace dev_allocation
                 // Remove focus from textbox
                 this.ActiveControl = lblAcessForm;
             }
+            else
+            {
+                MessageBox.Show("The email or password you entered is wrong, please try again", "INCORRECT AUTHENTICATION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }   
         }
         //--//
 
@@ -212,15 +213,18 @@ namespace dev_allocation
         // MouseHover
         private void lblNewDev_MouseEnter(object sender, EventArgs e)
         {
-            lblNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(200)))));
+            lblNewDev.ForeColor = System.Drawing.Color.FromArgb(100, 100, 200);
         }
         private void lblNewDev_MouseLeave(object sender, EventArgs e)
         {
-            lblNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            lblNewDev.ForeColor = System.Drawing.Color.FromArgb(231, 231, 255);
         }
 
-
-
+        private void lblNewDev_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmNewDev.GetInstance().Show();
+        }
         //--//
 
     }

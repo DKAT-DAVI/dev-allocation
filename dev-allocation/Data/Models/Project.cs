@@ -20,19 +20,23 @@ namespace dev_allocation
 
         public DateTime StartIn { get; set; }
         public DateTime FinishPlannedIn { get; set; }
-        public DateTime FinishIn { get; set; }        
+        public DateTime FinishIn { get; set; }
+
+        [NotMapped]
+        public List<Allocation> Allocations;
 
         //-- Constructors()
         public Project() 
         {
+            Allocations = new List<Allocation>();
         }
-        public Project(String name, DateTime startIn, DateTime finishPlannedIn)
+        public Project(String name, DateTime startIn, DateTime finishPlannedIn) : this()
         {
             Name = name;
             StartIn = startIn;
             FinishPlannedIn = finishPlannedIn;
         }
-        public Project(String name, DateTime startIn, DateTime finishPlannedIn, DateTime finishIn)
+        public Project(String name, DateTime startIn, DateTime finishPlannedIn, DateTime finishIn) : this()
         {
             Name = name;
             StartIn = startIn;

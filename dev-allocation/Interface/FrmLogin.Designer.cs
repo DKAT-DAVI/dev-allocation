@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.ptbMaximize = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlForm = new System.Windows.Forms.Panel();
             this.lblNewDev = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.ptbClose = new System.Windows.Forms.PictureBox();
             this.lblLogin = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).BeginInit();
@@ -60,7 +58,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(9)))));
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pnlLogin.Controls.Add(this.ptbMaximize);
             this.pnlLogin.Controls.Add(this.pictureBox1);
             this.pnlLogin.Controls.Add(this.pnlForm);
             this.pnlLogin.Controls.Add(this.pnlControlbox);
@@ -68,18 +65,6 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(745, 467);
             this.pnlLogin.TabIndex = 0;
-            // 
-            // ptbMaximize
-            // 
-            this.ptbMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
-            this.ptbMaximize.Image = ((System.Drawing.Image)(resources.GetObject("ptbMaximize.Image")));
-            this.ptbMaximize.Location = new System.Drawing.Point(688, 5);
-            this.ptbMaximize.Name = "ptbMaximize";
-            this.ptbMaximize.Size = new System.Drawing.Size(25, 25);
-            this.ptbMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbMaximize.TabIndex = 4;
-            this.ptbMaximize.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -119,6 +104,7 @@
             this.lblNewDev.Size = new System.Drawing.Size(104, 16);
             this.lblNewDev.TabIndex = 3;
             this.lblNewDev.Text = "New Developer";
+            this.lblNewDev.Click += new System.EventHandler(this.lblNewDev_Click);
             this.lblNewDev.MouseEnter += new System.EventHandler(this.lblNewDev_MouseEnter);
             this.lblNewDev.MouseLeave += new System.EventHandler(this.lblNewDev_MouseLeave);
             // 
@@ -201,7 +187,7 @@
             // 
             this.ptbMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ptbMinimize.Image = ((System.Drawing.Image)(resources.GetObject("ptbMinimize.Image")));
-            this.ptbMinimize.Location = new System.Drawing.Point(662, 5);
+            this.ptbMinimize.Location = new System.Drawing.Point(688, 5);
             this.ptbMinimize.Name = "ptbMinimize";
             this.ptbMinimize.Size = new System.Drawing.Size(25, 25);
             this.ptbMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +237,6 @@
             this.Text = "Dev Allocation";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.pnlLogin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlForm.ResumeLayout(false);
             this.pnlForm.PerformLayout();
@@ -269,7 +254,6 @@
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.Panel pnlControlbox;
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.PictureBox ptbMaximize;
         private System.Windows.Forms.PictureBox ptbMinimize;
         private System.Windows.Forms.PictureBox ptbClose;
         private System.Windows.Forms.PictureBox pictureBox1;

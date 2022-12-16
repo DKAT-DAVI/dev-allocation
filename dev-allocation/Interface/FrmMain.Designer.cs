@@ -38,7 +38,9 @@
             this.tmnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRegistration = new System.Windows.Forms.ToolStripMenuItem();
             this.tmnuNewDev = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmnuNewAllocation = new System.Windows.Forms.ToolStripMenuItem();
             this.tmnuNewProject = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmnuNewTask = new System.Windows.Forms.ToolStripMenuItem();
             this.tmnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinimize)).BeginInit();
@@ -113,7 +115,8 @@
             this.mnuFrmMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.mnuFrmMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFile,
-            this.mnuRegistration});
+            this.mnuRegistration,
+            this.tmnuAbout});
             this.mnuFrmMain.Location = new System.Drawing.Point(0, 0);
             this.mnuFrmMain.Name = "mnuFrmMain";
             this.mnuFrmMain.Padding = new System.Windows.Forms.Padding(6, 6, 0, 6);
@@ -126,7 +129,6 @@
             this.mnuFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
             this.mnuFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmnuAbout,
             this.tmnuExit});
             this.mnuFile.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.mnuFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
@@ -148,7 +150,9 @@
             // 
             this.mnuRegistration.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmnuNewDev,
-            this.tmnuNewProject});
+            this.tmnuNewAllocation,
+            this.tmnuNewProject,
+            this.tmnuNewTask});
             this.mnuRegistration.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.mnuRegistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.mnuRegistration.Name = "mnuRegistration";
@@ -161,8 +165,17 @@
             this.tmnuNewDev.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewDev.Name = "tmnuNewDev";
-            this.tmnuNewDev.Size = new System.Drawing.Size(180, 22);
+            this.tmnuNewDev.Size = new System.Drawing.Size(178, 22);
             this.tmnuNewDev.Text = "New Dev";
+            // 
+            // tmnuNewAllocation
+            // 
+            this.tmnuNewAllocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            this.tmnuNewAllocation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tmnuNewAllocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.tmnuNewAllocation.Name = "tmnuNewAllocation";
+            this.tmnuNewAllocation.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewAllocation.Text = "New Allocation";
             // 
             // tmnuNewProject
             // 
@@ -170,16 +183,24 @@
             this.tmnuNewProject.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewProject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewProject.Name = "tmnuNewProject";
-            this.tmnuNewProject.Size = new System.Drawing.Size(180, 22);
+            this.tmnuNewProject.Size = new System.Drawing.Size(178, 22);
             this.tmnuNewProject.Text = "New Project";
+            // 
+            // tmnuNewTask
+            // 
+            this.tmnuNewTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            this.tmnuNewTask.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tmnuNewTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.tmnuNewTask.Name = "tmnuNewTask";
+            this.tmnuNewTask.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewTask.Text = "New Task";
             // 
             // tmnuAbout
             // 
-            this.tmnuAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
-            this.tmnuAbout.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.tmnuAbout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.tmnuAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuAbout.Name = "tmnuAbout";
-            this.tmnuAbout.Size = new System.Drawing.Size(180, 22);
+            this.tmnuAbout.Size = new System.Drawing.Size(67, 23);
             this.tmnuAbout.Text = "About";
             // 
             // FrmMain
@@ -225,6 +246,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRegistration;
         private System.Windows.Forms.ToolStripMenuItem tmnuNewDev;
         private System.Windows.Forms.ToolStripMenuItem tmnuNewProject;
+        private System.Windows.Forms.ToolStripMenuItem tmnuNewAllocation;
+        private System.Windows.Forms.ToolStripMenuItem tmnuNewTask;
         private System.Windows.Forms.ToolStripMenuItem tmnuAbout;
     }
 }

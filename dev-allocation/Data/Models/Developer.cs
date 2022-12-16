@@ -21,7 +21,7 @@ namespace dev_allocation
         public DateTime BirthDate { get; set; }
 
         /// Store the level in memory
-        public Char LevelInMemoria { get; set; }
+        public Char LevelInMemory { get; set; }
 
         /// Receive the level that was inserted into memory 
         /// and maps to the database
@@ -31,25 +31,33 @@ namespace dev_allocation
         public String Level {
             get
             {
-                return LevelInMemoria.ToString();
+                return LevelInMemory.ToString();
             }
             set
             {
-                LevelInMemoria = value[0];
+                LevelInMemory = value[0];
             }
         }
 
         // Atribut for ralation one-to-one with tbl_credential [FOREIGN KEY]
         public Credential Credential { get; set; }
 
-        //-- Contructors()
-        public Developer() { }
+        // List of allocation that the developer is
+        [NotMapped]
+        public List<Allocation> Allocations;
 
-        public Developer(String name, DateTime birthDate, Char levelInMemoria)
+        //-- Contructors()
+        public Developer() 
+        { 
+            Allocations = new List<Allocation>();
+        }
+
+        public Developer(String name, DateTime birthDate, Char levelInMemoria) 
         {
             Name = name;
             BirthDate = birthDate;
-            LevelInMemoria = levelInMemoria;
+            LevelInMemory = levelInMemoria;
+            Allocations = new List<Allocation>();
         }
         //--//
     }

@@ -17,6 +17,7 @@ namespace dev_allocation
         // Primary Key
         public Int64 Id { get; set; }
 
+        [Required]
         [Index(IsUnique = true)]
         [StringLength(250)]
         public String Email { get; set; }
@@ -41,9 +42,9 @@ namespace dev_allocation
                 {
                     _password = value;
                 }
-                else if (value.Length >= 8 || value.Length <= 12)
+                else if (value.Length >= 8 && value.Length <= 12)
                 {
-                    _password = ComputeSHA256(value);
+                    _password = ComputeSHA256(value);   
                 }
                 else
                 {
@@ -59,7 +60,7 @@ namespace dev_allocation
         // Is the user admin?
         public Boolean  Administrator { get; set; }
 
-        // Atribut for ralation one-to-one with tbl_developer [FOREIGN KEY]
+        // Atribut for relationship one-to-one with tbl_developer [FOREIGN KEY]
         [Required]
         public Developer Developer { get; set; }
 
@@ -92,37 +93,6 @@ namespace dev_allocation
             return hash;
         }
         #endregion
-
-        /// Method to authenticate user login
-        public static Boolean AuthenticateDeveloper(String email, String password)
-        {
-            Developer developer = DeveloperRepository.FindDeveloperByEmail(email);
-
-            /// If email exists in database...
-            if (developer != null)
-            {
-                /// ... autheticate the password.
-                String passwordInDatabase = developer.Credential.Password;
-                password = ComputeSHA256(password);
-
-                if (passwordInDatabase == password)
-                {
-                    return true;
-                }
-                else
-                {
-                    /// Return a error Message to the user
-                    MessageBox.Show("The password you entered is wrong, please try again", "PASSWORD WRONG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return false;
-                }
-            }
-            else
-            {
-                /// Return a error Message to the user
-                MessageBox.Show("The email you entered is wrong, please try again", "EMAIL WRONG", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return false;
-            }
-        }
 
     }
 }

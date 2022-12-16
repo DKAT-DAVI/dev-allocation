@@ -53,6 +53,11 @@ namespace dev_allocation
         private void FrmMain_Load(object sender, EventArgs e)
         {
             ChangeBgColor();
+
+            if (!FrmLogin.DevLoggedIn.Credential.Administrator)
+            {
+                mnuRegistration.Visible = false;
+            }
         }
 
         // Close the window
@@ -157,20 +162,6 @@ namespace dev_allocation
                 mdiContainer.BackColor = Color.FromArgb(32, 35, 66);
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //--//
     }
 }
