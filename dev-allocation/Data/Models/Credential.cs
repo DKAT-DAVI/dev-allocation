@@ -48,7 +48,7 @@ namespace dev_allocation
                 }
                 else
                 {
-                    throw new ArgumentException("Invalid Password!");
+                    throw new Exception("Invalid Password!");
                 }
             }
         }

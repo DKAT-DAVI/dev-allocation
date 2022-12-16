@@ -55,7 +55,6 @@ namespace dev_allocation.Interface
                 {
                     chkActive.Enabled = true;
                     chkAdministrator.Enabled = true;
-
                 }
             }
             
@@ -72,7 +71,7 @@ namespace dev_allocation.Interface
             txbEmail.Text = "Insert your Email";
             txbEmail.ForeColor = Color.Gray;
 
-            txbPassword.Text = "Enter a password greater than 8 and less than 12";
+            txbPassword.Text = "Password";
             txbNome.ForeColor = Color.Gray;
         }
 
@@ -120,8 +119,88 @@ namespace dev_allocation.Interface
         {
             ptbMinimize.BackColor = System.Drawing.Color.FromArgb(17, 16, 52);
         }
-
         //--//
+
+
+        //-- txbNome
+        //
+        // Placeholder
+        private void txbNome_Enter(object sender, EventArgs e)
+        {
+            if (txbNome.Text == "Insert your name")
+            {
+                txbNome.Text = "";
+                txbNome.ForeColor = Color.Black;
+            }
+        }
+        private void txbNome_Leave(object sender, EventArgs e)
+        {
+            if (txbNome.Text == "")
+            {
+                txbNome.Text = "Insert your name";
+                txbNome.ForeColor = Color.Gray;
+            }
+        }
+        //--//
+
+
+        //-- txbEmail
+        //
+        // Placeholder
+        private void txbEmail_Enter(object sender, EventArgs e)
+        {
+            if (txbEmail.Text == "Insert your Email")
+            {
+                txbEmail.Text = "";
+                txbEmail.ForeColor = Color.Black;
+            }
+        }
+        private void txbEmail_Leave(object sender, EventArgs e)
+        {
+            if (txbEmail.Text == "")
+            {
+                txbEmail.Text = "Insert your Email";
+                txbEmail.ForeColor = Color.Gray;
+            }
+        }
+        //--//
+
+
+        //-- txbPassword
+        //
+        // Placeholder
+        private void txbPassword_Enter(object sender, EventArgs e)
+        {
+            if (txbPassword.Text == "Password")
+            {
+                txbPassword.Text = "";
+                txbPassword.ForeColor = Color.Black;
+            }
+
+            // Password formatting message
+            lblPasswordFormatMessage.Visible = true;
+
+            // HidePassword
+            txbPassword.UseSystemPasswordChar = true;
+        }
+        private void txbPassword_Leave(object sender, EventArgs e)
+        {
+            if (txbPassword.Text == "")
+            {
+                txbPassword.Text = "Password";
+                txbPassword.ForeColor = Color.Gray;
+
+                /// HidePassword
+                txbPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                // Password formatting message
+                lblPasswordFormatMessage.Visible = false;
+            }
+        }
+        //--//
+
 
         //-- btnSignUp
         //MouseHover

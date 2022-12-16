@@ -34,6 +34,7 @@
             this.ptbClose = new System.Windows.Forms.PictureBox();
             this.lblSignUp = new System.Windows.Forms.Label();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.lblPasswordFormatMessage = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
@@ -113,6 +114,7 @@
             // 
             this.pnlForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            this.pnlForm.Controls.Add(this.lblPasswordFormatMessage);
             this.pnlForm.Controls.Add(this.comboBox1);
             this.pnlForm.Controls.Add(this.label7);
             this.pnlForm.Controls.Add(this.chkActive);
@@ -135,17 +137,30 @@
             this.pnlForm.Size = new System.Drawing.Size(453, 249);
             this.pnlForm.TabIndex = 6;
             // 
+            // lblPasswordFormatMessage
+            // 
+            this.lblPasswordFormatMessage.AutoSize = true;
+            this.lblPasswordFormatMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordFormatMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.lblPasswordFormatMessage.Location = new System.Drawing.Point(93, 118);
+            this.lblPasswordFormatMessage.Name = "lblPasswordFormatMessage";
+            this.lblPasswordFormatMessage.Size = new System.Drawing.Size(294, 12);
+            this.lblPasswordFormatMessage.TabIndex = 17;
+            this.lblPasswordFormatMessage.Text = "The password must be at least 8 characters and at most 12 characters.";
+            this.lblPasswordFormatMessage.Visible = false;
+            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("Consolas", 14F);
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "J",
             "P",
             "S"});
-            this.comboBox1.Location = new System.Drawing.Point(360, 124);
+            this.comboBox1.Location = new System.Drawing.Point(375, 137);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(72, 30);
+            this.comboBox1.Size = new System.Drawing.Size(36, 30);
             this.comboBox1.TabIndex = 4;
             // 
             // label7
@@ -153,7 +168,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.label7.Location = new System.Drawing.Point(308, 128);
+            this.label7.Location = new System.Drawing.Point(321, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 19);
             this.label7.TabIndex = 16;
@@ -165,7 +180,7 @@
             this.chkActive.Enabled = false;
             this.chkActive.Font = new System.Drawing.Font("Arial", 25F, System.Drawing.FontStyle.Bold);
             this.chkActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.chkActive.Location = new System.Drawing.Point(350, 167);
+            this.chkActive.Location = new System.Drawing.Point(350, 175);
             this.chkActive.Name = "chkActive";
             this.chkActive.Size = new System.Drawing.Size(15, 14);
             this.chkActive.TabIndex = 6;
@@ -177,7 +192,7 @@
             this.chkAdministrator.Enabled = false;
             this.chkAdministrator.Font = new System.Drawing.Font("Arial", 25F, System.Drawing.FontStyle.Bold);
             this.chkAdministrator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.chkAdministrator.Location = new System.Drawing.Point(225, 167);
+            this.chkAdministrator.Location = new System.Drawing.Point(225, 175);
             this.chkAdministrator.Name = "chkAdministrator";
             this.chkAdministrator.Size = new System.Drawing.Size(15, 14);
             this.chkAdministrator.TabIndex = 5;
@@ -188,7 +203,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(107, 164);
+            this.label6.Location = new System.Drawing.Point(107, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 13;
@@ -199,7 +214,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(288, 164);
+            this.label5.Location = new System.Drawing.Point(288, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 19);
             this.label5.TabIndex = 12;
@@ -207,10 +222,10 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 14F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(92, 122);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 10F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(92, 140);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // label4
@@ -218,7 +233,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(10, 129);
+            this.label4.Location = new System.Drawing.Point(10, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 19);
             this.label4.TabIndex = 10;
@@ -226,19 +241,22 @@
             // 
             // txbPassword
             // 
-            this.txbPassword.Font = new System.Drawing.Font("Consolas", 10F);
-            this.txbPassword.Location = new System.Drawing.Point(92, 87);
+            this.txbPassword.Font = new System.Drawing.Font("Consolas", 14F);
+            this.txbPassword.ForeColor = System.Drawing.Color.Gray;
+            this.txbPassword.Location = new System.Drawing.Point(92, 88);
             this.txbPassword.MaxLength = 12;
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(340, 23);
+            this.txbPassword.Size = new System.Drawing.Size(340, 29);
             this.txbPassword.TabIndex = 2;
+            this.txbPassword.Enter += new System.EventHandler(this.txbPassword_Enter);
+            this.txbPassword.Leave += new System.EventHandler(this.txbPassword_Leave);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(5, 92);
+            this.label3.Location = new System.Drawing.Point(5, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 19);
             this.label3.TabIndex = 8;
@@ -262,6 +280,8 @@
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(340, 29);
             this.txbEmail.TabIndex = 1;
+            this.txbEmail.Enter += new System.EventHandler(this.txbEmail_Enter);
+            this.txbEmail.Leave += new System.EventHandler(this.txbEmail_Leave);
             // 
             // label1
             // 
@@ -282,7 +302,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnCancel.Location = new System.Drawing.Point(75, 195);
+            this.btnCancel.Location = new System.Drawing.Point(75, 200);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(130, 39);
             this.btnCancel.TabIndex = 8;
@@ -300,7 +320,7 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSignUp.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold);
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.btnSignUp.Location = new System.Drawing.Point(255, 195);
+            this.btnSignUp.Location = new System.Drawing.Point(255, 200);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(130, 39);
             this.btnSignUp.TabIndex = 7;
@@ -317,6 +337,8 @@
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(340, 29);
             this.txbNome.TabIndex = 0;
+            this.txbNome.Enter += new System.EventHandler(this.txbNome_Enter);
+            this.txbNome.Leave += new System.EventHandler(this.txbNome_Leave);
             // 
             // lblAcessForm
             // 
@@ -378,5 +400,6 @@
         private System.Windows.Forms.CheckBox chkActive;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblPasswordFormatMessage;
     }
 }
