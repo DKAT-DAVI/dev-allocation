@@ -36,5 +36,25 @@ namespace dev_allocation.Data
             }
         }
 
+        // Select a developer
+        public static Developer FindDeveloperByEmail(String email)
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Developers
+                        .Include("Credential")
+                        .Where(d => d.Credential.Email == email)
+                        .FirstOrDefault<Developer>();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

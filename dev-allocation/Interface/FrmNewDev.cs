@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace dev_allocation.Interface
 {
-    public partial class FrmNewDev : Form
+    internal partial class FrmNewDev : Form
     {
         #region Singleton in the window
         private static FrmNewDev _instance;
@@ -21,6 +21,7 @@ namespace dev_allocation.Interface
             {
                 _instance = new FrmNewDev();
             }
+
             return _instance;
         }
         #endregion
@@ -45,9 +46,19 @@ namespace dev_allocation.Interface
         #endregion
 
         //-- FrmNewDev
-        public FrmNewDev()
+        private FrmNewDev()
         {
             InitializeComponent();
+            if(FrmLogin.DevLoggedIn != null)
+            {
+                if (FrmLogin.DevLoggedIn.Credential.Administrator)
+                {
+                    chkActive.Enabled = true;
+                    chkAdministrator.Enabled = true;
+
+                }
+            }
+            
         }
 
         private void FrmNewDev_Load(object sender, EventArgs e)
@@ -63,10 +74,6 @@ namespace dev_allocation.Interface
 
             txbPassword.Text = "Enter a password greater than 8 and less than 12";
             txbNome.ForeColor = Color.Gray;
-
-            chkActive.Enabled = FrmLogin.DevLoggedIn.Credential.Active;
-            chkAdministrator.Enabled = FrmLogin.DevLoggedIn.Credential.Administrator;
-
         }
 
         //--//
@@ -83,8 +90,19 @@ namespace dev_allocation.Interface
 
         private void ptbClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmLogin.GetInstance().Show();
+            if (FrmLogin.DevLoggedIn != null)
+            {
+                if (FrmLogin.DevLoggedIn.Credential.Administrator)
+                {
+                    this.Close();
+
+                }
+            }
+            else
+            {
+                this.Close();
+                FrmLogin.GetInstance().Show();
+            }
         }
         //--//
 
@@ -129,8 +147,21 @@ namespace dev_allocation.Interface
         //Click
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
-            FrmLogin.GetInstance().Show();
+            // If is usage user
+            if (FrmLogin.DevLoggedIn != null)
+            {
+                if (FrmLogin.DevLoggedIn.Credential.Administrator)
+                {
+                    this.Close();
+                }
+            }
+
+            // If is administrator
+            else
+            {
+                this.Close();
+                FrmLogin.GetInstance().Show();
+            }
         }
         //Mousehover
         private void btnCancel_MouseEnter(object sender, EventArgs e)

@@ -65,7 +65,11 @@ namespace dev_allocation
         public Developer Developer { get; set; }
 
         //-- Constructor()
-        public Credential() { }
+        public Credential()
+        {
+            Active = false;
+            Administrator = false;
+        }
         public Credential(String email, String password, Boolean active, Boolean administrator)
         {
             Email = email;

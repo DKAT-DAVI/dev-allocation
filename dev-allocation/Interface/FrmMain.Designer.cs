@@ -142,7 +142,7 @@
             this.tmnuExit.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuExit.Name = "tmnuExit";
-            this.tmnuExit.Size = new System.Drawing.Size(180, 22);
+            this.tmnuExit.Size = new System.Drawing.Size(102, 22);
             this.tmnuExit.Text = "Exit";
             this.tmnuExit.Click += new System.EventHandler(this.tmnuExit_Click);
             // 
@@ -165,16 +165,18 @@
             this.tmnuNewDev.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewDev.Name = "tmnuNewDev";
-            this.tmnuNewDev.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewDev.Size = new System.Drawing.Size(180, 22);
             this.tmnuNewDev.Text = "New Dev";
+            this.tmnuNewDev.Click += new System.EventHandler(this.tmnuNewDev_Click);
             // 
             // tmnuNewAllocation
             // 
             this.tmnuNewAllocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            this.tmnuNewAllocation.Enabled = false;
             this.tmnuNewAllocation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewAllocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewAllocation.Name = "tmnuNewAllocation";
-            this.tmnuNewAllocation.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewAllocation.Size = new System.Drawing.Size(180, 22);
             this.tmnuNewAllocation.Text = "New Allocation";
             // 
             // tmnuNewProject
@@ -183,16 +185,17 @@
             this.tmnuNewProject.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewProject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewProject.Name = "tmnuNewProject";
-            this.tmnuNewProject.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewProject.Size = new System.Drawing.Size(180, 22);
             this.tmnuNewProject.Text = "New Project";
             // 
             // tmnuNewTask
             // 
             this.tmnuNewTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
+            this.tmnuNewTask.Enabled = false;
             this.tmnuNewTask.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuNewTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuNewTask.Name = "tmnuNewTask";
-            this.tmnuNewTask.Size = new System.Drawing.Size(178, 22);
+            this.tmnuNewTask.Size = new System.Drawing.Size(180, 22);
             this.tmnuNewTask.Text = "New Task";
             // 
             // tmnuAbout

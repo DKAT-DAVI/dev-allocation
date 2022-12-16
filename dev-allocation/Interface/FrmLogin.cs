@@ -1,4 +1,5 @@
-﻿using dev_allocation.Data.Repositorys;
+﻿using dev_allocation.Data;
+using dev_allocation.Data.Repositorys;
 using dev_allocation.Interface;
 using System;
 using System.Collections.Generic;
@@ -52,13 +53,14 @@ namespace dev_allocation
 
 
         //-- FrmMain
-        public FrmLogin()
+        private FrmLogin()
         {
             InitializeComponent();
+            //DevLoggedIn = CredentialRepository.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text);
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
-        {
+        { 
             // Starting the database connection
             Repository dbContext = new Repository();
 
@@ -186,25 +188,30 @@ namespace dev_allocation
         // Click
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Boolean authenticate = CredentialRepository.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text);
-            if (authenticate)
+            try
             {
-                this.Hide();
-                FrmMain.GetInstance().Show();
+                DevLoggedIn = CredentialRepository.AuthenticateDeveloper(txbEmail.Text, txbPassword.Text);
 
-                txbEmail.Text = "Email";
-                txbEmail.ForeColor = Color.Gray;
-                txbPassword.Text = "Password";
-                txbPassword.ForeColor = Color.Gray;
-                txbPassword.UseSystemPasswordChar = false;
+                if (DevLoggedIn != null)
+                {
+                    this.Hide();
+                    FrmMain.GetInstance().Show();
 
-                // Remove focus from textbox
-                this.ActiveControl = lblAcessForm;
+                    txbEmail.Text = "Email";
+                    txbEmail.ForeColor = Color.Gray;
+                    txbPassword.Text = "Password";
+                    txbPassword.ForeColor = Color.Gray;
+                    txbPassword.UseSystemPasswordChar = false;
+
+                    // Remove focus from textbox
+                    this.ActiveControl = lblAcessForm;
+                }
             }
-            else
+            catch (Exception error)
             {
-                MessageBox.Show("The email or password you entered is wrong, please try again", "INCORRECT AUTHENTICATION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }   
+                MessageBox.Show($"{error.Message}", "INCORRECT AUTHENTICATION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
         }
         //--//
 
@@ -224,6 +231,7 @@ namespace dev_allocation
         {
             this.Hide();
             FrmNewDev.GetInstance().Show();
+
         }
         //--//
 

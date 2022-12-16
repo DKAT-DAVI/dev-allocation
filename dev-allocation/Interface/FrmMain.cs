@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dev_allocation.Interface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -60,10 +61,10 @@ namespace dev_allocation
             }
         }
 
-        // Close the window
+        // When close the window
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            FrmLogin.GetInstance().Show();
         }
         //--//
 
@@ -147,6 +148,27 @@ namespace dev_allocation
         }
         //--//
 
+        //-- tmnuNewDev
+        private void tmnuNewDev_Click(object sender, EventArgs e)
+        {
+            FrmNewDev newDev = FrmNewDev.GetInstance();
+            if (newDev.MdiParent == null)
+            {
+                newDev.MdiParent = this;
+                newDev.Show();
+            }
+            
+            // Checking if the window is minimized
+            else 
+            {
+                newDev.WindowState = FormWindowState.Normal;
+            }
+
+            newDev.Activate();
+
+        }
+        //--//
+
         //-- Methods()
 
         // Change the background color of the MDI container
@@ -162,6 +184,8 @@ namespace dev_allocation
                 mdiContainer.BackColor = Color.FromArgb(32, 35, 66);
             }
         }
+
+
         //--//
     }
 }

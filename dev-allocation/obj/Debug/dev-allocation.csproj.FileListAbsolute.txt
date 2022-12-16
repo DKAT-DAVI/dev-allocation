@@ -204,3 +204,4 @@ C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\bin\Debug\Syste
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\obj\Debug\dev-allocation.csproj.CopyComplete
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\obj\Debug\dev_allocation.Interface.FrmNewDev.resources
+G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.Interface.FrmNewDev.resources
