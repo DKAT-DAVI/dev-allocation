@@ -35,13 +35,13 @@
             this.lblSignUp = new System.Windows.Forms.Label();
             this.pnlForm = new System.Windows.Forms.Panel();
             this.lblPasswordFormatMessage = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxLevel = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.chkActive = new System.Windows.Forms.CheckBox();
             this.chkAdministrator = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txbPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.txbNome = new System.Windows.Forms.TextBox();
+            this.txbName = new System.Windows.Forms.TextBox();
             this.lblAcessForm = new System.Windows.Forms.Label();
             this.pnlControlbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinimize)).BeginInit();
@@ -115,13 +115,13 @@
             this.pnlForm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
             this.pnlForm.Controls.Add(this.lblPasswordFormatMessage);
-            this.pnlForm.Controls.Add(this.comboBox1);
+            this.pnlForm.Controls.Add(this.cbxLevel);
             this.pnlForm.Controls.Add(this.label7);
             this.pnlForm.Controls.Add(this.chkActive);
             this.pnlForm.Controls.Add(this.chkAdministrator);
             this.pnlForm.Controls.Add(this.label6);
             this.pnlForm.Controls.Add(this.label5);
-            this.pnlForm.Controls.Add(this.dateTimePicker1);
+            this.pnlForm.Controls.Add(this.dtpBirthDate);
             this.pnlForm.Controls.Add(this.label4);
             this.pnlForm.Controls.Add(this.txbPassword);
             this.pnlForm.Controls.Add(this.label3);
@@ -130,7 +130,7 @@
             this.pnlForm.Controls.Add(this.label1);
             this.pnlForm.Controls.Add(this.btnCancel);
             this.pnlForm.Controls.Add(this.btnSignUp);
-            this.pnlForm.Controls.Add(this.txbNome);
+            this.pnlForm.Controls.Add(this.txbName);
             this.pnlForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
             this.pnlForm.Location = new System.Drawing.Point(151, 129);
             this.pnlForm.Name = "pnlForm";
@@ -149,19 +149,19 @@
             this.lblPasswordFormatMessage.Text = "The password must be at least 8 characters and at most 12 characters.";
             this.lblPasswordFormatMessage.Visible = false;
             // 
-            // comboBox1
+            // cbxLevel
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Consolas", 14F);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxLevel.Font = new System.Drawing.Font("Consolas", 14F);
+            this.cbxLevel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cbxLevel.FormattingEnabled = true;
+            this.cbxLevel.Items.AddRange(new object[] {
             "J",
             "P",
             "S"});
-            this.comboBox1.Location = new System.Drawing.Point(375, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(36, 30);
-            this.comboBox1.TabIndex = 4;
+            this.cbxLevel.Location = new System.Drawing.Point(375, 137);
+            this.cbxLevel.Name = "cbxLevel";
+            this.cbxLevel.Size = new System.Drawing.Size(36, 30);
+            this.cbxLevel.TabIndex = 4;
             // 
             // label7
             // 
@@ -170,9 +170,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.label7.Location = new System.Drawing.Point(321, 141);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 19);
+            this.label7.Size = new System.Drawing.Size(56, 19);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Level";
+            this.label7.Text = "Level*";
             // 
             // chkActive
             // 
@@ -220,13 +220,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Active";
             // 
-            // dateTimePicker1
+            // dtpBirthDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Consolas", 10F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(92, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtpBirthDate.Font = new System.Drawing.Font("Consolas", 10F);
+            this.dtpBirthDate.Location = new System.Drawing.Point(92, 140);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpBirthDate.TabIndex = 3;
             // 
             // label4
             // 
@@ -269,9 +269,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(35, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 19);
+            this.label2.Size = new System.Drawing.Size(57, 19);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Email";
+            this.label2.Text = "Email*";
             // 
             // txbEmail
             // 
@@ -290,9 +290,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(33, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 19);
+            this.label1.Size = new System.Drawing.Size(59, 19);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Name";
+            this.label1.Text = "Name*";
             // 
             // btnCancel
             // 
@@ -330,15 +330,15 @@
             this.btnSignUp.MouseEnter += new System.EventHandler(this.btnSignUp_MouseEnter);
             this.btnSignUp.MouseLeave += new System.EventHandler(this.btnSignUp_MouseLeave);
             // 
-            // txbNome
+            // txbName
             // 
-            this.txbNome.Font = new System.Drawing.Font("Consolas", 14F);
-            this.txbNome.Location = new System.Drawing.Point(92, 18);
-            this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(340, 29);
-            this.txbNome.TabIndex = 0;
-            this.txbNome.Enter += new System.EventHandler(this.txbNome_Enter);
-            this.txbNome.Leave += new System.EventHandler(this.txbNome_Leave);
+            this.txbName.Font = new System.Drawing.Font("Consolas", 14F);
+            this.txbName.Location = new System.Drawing.Point(92, 18);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(340, 29);
+            this.txbName.TabIndex = 0;
+            this.txbName.Enter += new System.EventHandler(this.txbNome_Enter);
+            this.txbName.Leave += new System.EventHandler(this.txbNome_Leave);
             // 
             // lblAcessForm
             // 
@@ -385,12 +385,12 @@
         private System.Windows.Forms.Panel pnlForm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSignUp;
-        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Label lblAcessForm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbPassword;
         private System.Windows.Forms.Label label3;
@@ -398,7 +398,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkActive;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxLevel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPasswordFormatMessage;
     }

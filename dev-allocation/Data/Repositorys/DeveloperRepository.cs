@@ -11,7 +11,7 @@ namespace dev_allocation.Data
     {
 
         // Save developer in database
-        public static void SaveDeveloper(Developer developer)
+        public static void SaveDeveloper(Developer developer, Credential credential)
         {
             try
             {
@@ -24,6 +24,7 @@ namespace dev_allocation.Data
                     else
                     {
                         dbContext.Entry(developer).State = EntityState.Modified;
+                        dbContext.Entry(credential).State = EntityState.Modified;
                     }
 
                     dbContext.SaveChanges();
@@ -37,6 +38,21 @@ namespace dev_allocation.Data
         }
 
         // Select a developer
+        public static List<Developer> FindAllDevelopers()
+        {
+            try
+            {
+                using (Repository dbContext = new Repository())
+                {
+                    return dbContext.Developers.Include("Credential").ToList<Developer>();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public static Developer FindDeveloperByEmail(String email)
         {
             try

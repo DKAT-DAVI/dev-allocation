@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dev_allocation.Data;
+using dev_allocation.Data.Repositorys;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,14 +67,14 @@ namespace dev_allocation.Interface
             // Remove focus from textbox
             this.ActiveControl = lblAcessForm;
 
-            txbNome.Text = "Insert your name";
-            txbNome.ForeColor = Color.Gray;
+            txbName.Text = "Insert your name";
+            txbName.ForeColor = Color.Gray;
 
             txbEmail.Text = "Insert your Email";
             txbEmail.ForeColor = Color.Gray;
 
             txbPassword.Text = "Password";
-            txbNome.ForeColor = Color.Gray;
+            txbName.ForeColor = Color.Gray;
         }
 
         //--//
@@ -127,18 +129,18 @@ namespace dev_allocation.Interface
         // Placeholder
         private void txbNome_Enter(object sender, EventArgs e)
         {
-            if (txbNome.Text == "Insert your name")
+            if (txbName.Text == "Insert your name")
             {
-                txbNome.Text = "";
-                txbNome.ForeColor = Color.Black;
+                txbName.Text = "";
+                txbName.ForeColor = Color.Black;
             }
         }
         private void txbNome_Leave(object sender, EventArgs e)
         {
-            if (txbNome.Text == "")
+            if (txbName.Text == "")
             {
-                txbNome.Text = "Insert your name";
-                txbNome.ForeColor = Color.Gray;
+                txbName.Text = "Insert your name";
+                txbName.ForeColor = Color.Gray;
             }
         }
         //--//
@@ -217,7 +219,69 @@ namespace dev_allocation.Interface
         // Click
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Boolean verifyEmail = CredentialRepository.EmailIsValid(txbEmail.Text);
+                
+                // Check if the fields are filled
+                if (ValidateFields())
+                {
+                    // Check if the email exists
+                    if (verifyEmail)
+                    {
+                        // Creating a new Dev
+                        Developer dev = new Developer(txbName.Text, dtpBirthDate.Value.Date, Convert.ToChar(cbxLevel.SelectedItem));
+                        Credential credential = new Credential(txbEmail.Text, txbPassword.Text, chkActive.Checked, chkAdministrator.Checked);
 
+                        // Relationship dev to credential
+                        dev.Credential = credential;
+                        credential.Developer = dev;
+
+                        // Saving the new Dev
+                        DeveloperRepository.SaveDeveloper(dev, credential);
+
+                        // Modifying the window according to administrator permissions
+                        if (FrmLogin.DevLoggedIn != null)
+                        {
+                            if (FrmLogin.DevLoggedIn.Credential.Administrator)
+                            {
+                                // Succes Message
+                                MessageBox.Show($"User created successfully", "SUCCESSFULLY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Close();
+
+                            }
+                        }
+                        else
+                        {
+                            // Succes Message
+                            MessageBox.Show($"User created successfully", "SUCCESSFULLY", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                            FrmLogin.GetInstance().Show();
+                        }
+                    }
+                    else
+                    {
+                        // Clear fields
+                        txbName.Text = "";
+                        txbEmail.Text = "";
+                        txbPassword.Text = "";
+                        dtpBirthDate.Value = DateTime.Now;
+                        cbxLevel.SelectedItem = null;
+                        chkActive.Checked = false;
+                        chkAdministrator.Checked = false;
+                    }
+                }
+                else
+                {
+                    // Error message
+                    MessageBox.Show($"Fill in all required fields", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch ( Exception error)
+            {
+                // Error message
+                MessageBox.Show($"{error.Message}", "EMAIL ALREADY USED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
         //--//
 
@@ -254,5 +318,25 @@ namespace dev_allocation.Interface
             btnCancel.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold);
         }
         //-//
+
+        //-- Methods()
+
+        /// Method to check if the fields are filled
+        private Boolean ValidateFields()
+        {
+            if (txbName.Text == "Insert yout name" 
+                || txbName.Text == "" 
+                || txbEmail.Text == "Insert your Email"
+                || txbEmail.Text == ""
+                || cbxLevel.SelectedItem == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        //--//
     }
 }

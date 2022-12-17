@@ -209,7 +209,7 @@ namespace dev_allocation
             }
             catch (Exception error)
             {
-                MessageBox.Show($"{error.Message}", "INCORRECT AUTHENTICATION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"{error.Message}", "AUTHENTICATION ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
         }
