@@ -39,47 +39,6 @@ C:\Users\Davi Teixeira\Desktop\dev-allocation\bin\Debug\System.Numerics.Vectors.
 C:\Users\Davi Teixeira\Desktop\dev-allocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Davi Teixeira\Desktop\dev-allocation\obj\Debug\dev-allocation.csproj.CopyComplete
 C:\Users\Davi Teixeira\Desktop\dev-allocation\obj\Debug\dev_allocation.FrmLogin.resources
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\dev-allocation.exe.config
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\dev-allocation.exe
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\dev-allocation.pdb
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\BouncyCastle.Crypto.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\EntityFramework.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\EntityFramework.SqlServer.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\Google.Protobuf.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Compression.LZ4.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Compression.LZ4.Streams.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Hash.xxHash.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\MySql.Data.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\MySql.Data.EntityFramework.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Buffers.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Memory.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Numerics.Vectors.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\ZstdNet.dll
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\BouncyCastle.Crypto.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\EntityFramework.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\EntityFramework.SqlServer.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\Google.Protobuf.pdb
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\Google.Protobuf.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Compression.LZ4.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Compression.LZ4.Streams.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\K4os.Hash.xxHash.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\MySql.Data.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\MySql.Data.EntityFramework.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Buffers.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Memory.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Numerics.Vectors.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.AssemblyReference.cache
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.SuggestedBindingRedirects.cache
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.FrmLogin.resources
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.FrmMain.resources
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.Properties.Resources.resources
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.GenerateResource.cache
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.CoreCompileInputs.cache
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.CopyComplete
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.exe
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.pdb
 C:\Users\Aluno\Desktop\Repository\dev-allocation-main\dev-allocation\obj\Debug\dev-allocation.csproj.AssemblyReference.cache
 C:\Users\Aluno\Desktop\Repository\dev-allocation-main\dev-allocation\obj\Debug\dev-allocation.csproj.SuggestedBindingRedirects.cache
 C:\Users\Aluno\Desktop\Repository\dev-allocation-main\dev-allocation\obj\Debug\dev_allocation.FrmLogin.resources
@@ -204,4 +163,3 @@ C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\bin\Debug\Syste
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\obj\Debug\dev-allocation.csproj.CopyComplete
 C:\Users\Davi Teixeira\Desktop\Trabalho de Guisso\dev-allocation\obj\Debug\dev_allocation.Interface.FrmNewDev.resources
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.Interface.FrmNewDev.resources

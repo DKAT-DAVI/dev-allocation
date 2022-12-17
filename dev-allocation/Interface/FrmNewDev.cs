@@ -65,7 +65,7 @@ namespace dev_allocation.Interface
         private void FrmNewDev_Load(object sender, EventArgs e)
         {
             // Remove focus from textbox
-            this.ActiveControl = lblAcessForm;
+            this.ActiveControl = lblNewDev;
 
             txbName.Text = "Insert your name";
             txbName.ForeColor = Color.Gray;

@@ -169,6 +169,28 @@ namespace dev_allocation
         }
         //--//
 
+
+        //-- tmnuNewProject
+        private void tmnuNewProject_Click(object sender, EventArgs e)
+        {
+            FrmNewProject newProject = FrmNewProject.GetInstance();
+            if (newProject.MdiParent == null)
+            {
+                newProject.MdiParent = this;
+                newProject.Show();
+            }
+
+            // Checking if the window is minimized
+            else
+            {
+                newProject.WindowState = FormWindowState.Normal;
+            }
+
+            newProject.Activate();
+        }
+        //--//
+
+
         //-- Methods()
 
         // Change the background color of the MDI container
@@ -184,6 +206,15 @@ namespace dev_allocation
                 mdiContainer.BackColor = Color.FromArgb(32, 35, 66);
             }
         }
+
+        private void tmnuAbout_Click(object sender, EventArgs e)
+        {
+            About about = About.GetInstance();
+            about.MdiParent = this;
+            about.Show();
+        }
+
+
 
 
         //--//

@@ -51,7 +51,7 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.txbName = new System.Windows.Forms.TextBox();
-            this.lblAcessForm = new System.Windows.Forms.Label();
+            this.lblNewDev = new System.Windows.Forms.Label();
             this.pnlControlbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbClose)).BeginInit();
@@ -132,7 +132,7 @@
             this.pnlForm.Controls.Add(this.btnSignUp);
             this.pnlForm.Controls.Add(this.txbName);
             this.pnlForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(16)))), ((int)(((byte)(52)))));
-            this.pnlForm.Location = new System.Drawing.Point(151, 129);
+            this.pnlForm.Location = new System.Drawing.Point(142, 129);
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(453, 249);
             this.pnlForm.TabIndex = 6;
@@ -340,16 +340,16 @@
             this.txbName.Enter += new System.EventHandler(this.txbNome_Enter);
             this.txbName.Leave += new System.EventHandler(this.txbNome_Leave);
             // 
-            // lblAcessForm
+            // lblNewDev
             // 
-            this.lblAcessForm.AutoSize = true;
-            this.lblAcessForm.Font = new System.Drawing.Font("Consolas", 25F, System.Drawing.FontStyle.Bold);
-            this.lblAcessForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
-            this.lblAcessForm.Location = new System.Drawing.Point(219, 66);
-            this.lblAcessForm.Name = "lblAcessForm";
-            this.lblAcessForm.Size = new System.Drawing.Size(321, 40);
-            this.lblAcessForm.TabIndex = 4;
-            this.lblAcessForm.Text = "REGISTER NEW DEV";
+            this.lblNewDev.AutoSize = true;
+            this.lblNewDev.Font = new System.Drawing.Font("Consolas", 25F, System.Drawing.FontStyle.Bold);
+            this.lblNewDev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
+            this.lblNewDev.Location = new System.Drawing.Point(210, 66);
+            this.lblNewDev.Name = "lblNewDev";
+            this.lblNewDev.Size = new System.Drawing.Size(321, 40);
+            this.lblNewDev.TabIndex = 4;
+            this.lblNewDev.Text = "REGISTER NEW DEV";
             // 
             // FrmNewDev
             // 
@@ -358,7 +358,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(4)))), ((int)(((byte)(9)))));
             this.ClientSize = new System.Drawing.Size(729, 428);
             this.Controls.Add(this.pnlForm);
-            this.Controls.Add(this.lblAcessForm);
+            this.Controls.Add(this.lblNewDev);
             this.Controls.Add(this.pnlControlbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNewDev";
@@ -386,7 +386,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox txbName;
-        private System.Windows.Forms.Label lblAcessForm;
+        private System.Windows.Forms.Label lblNewDev;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label1;
