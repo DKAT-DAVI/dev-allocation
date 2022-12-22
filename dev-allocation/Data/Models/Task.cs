@@ -17,15 +17,11 @@ namespace dev_allocation
         [StringLength(200)]
         public String Description{ get; set; }
 
-        [Required]
-        public Allocation Allocation { get; set; }
-
         // Constructors()
         public Task() { }
-        public Task(String description, Allocation allocation)
+        public Task(String description)
         {
             Description = description;
-            Allocation = allocation;
         }
 
     }

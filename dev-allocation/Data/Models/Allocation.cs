@@ -17,23 +17,27 @@ namespace dev_allocation
         public Byte HoursWorkPerWeek { get; set; }
         public Decimal Remuneration { get; set; }
 
-        //-- Relations
+        //-- Relationships
         public Project Project { get; set; }
         public Developer Developer { get; set; }
+
+        [NotMapped]
+        public List<Task> Tasks { get; set; }
         //--//
 
         //-- Constructors()
         public Allocation()
         {
+            Tasks = new List<Task>();
         }
-        public Allocation(DateTime startIn, DateTime finishIn, byte hoursWorkPerWeek, decimal remuneration)
+        public Allocation(DateTime startIn, DateTime finishIn, byte hoursWorkPerWeek, decimal remuneration) :this()
         {
             StartIn = startIn;
             FinishIn = finishIn;
             HoursWorkPerWeek = hoursWorkPerWeek;
             Remuneration = remuneration;
         }
-        public Allocation(DateTime startIn, DateTime finishIn, byte hoursWorkPerWeek, decimal remuneration, Project project, Developer developer)
+        public Allocation(DateTime startIn, DateTime finishIn, byte hoursWorkPerWeek, decimal remuneration, Project project, Developer developer) : this()
         {
             StartIn = startIn;
             FinishIn = finishIn;

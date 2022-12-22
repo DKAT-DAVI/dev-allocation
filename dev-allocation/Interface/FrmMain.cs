@@ -65,6 +65,7 @@ namespace dev_allocation
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             FrmLogin.GetInstance().Show();
+            FrmLogin.DevLoggedIn = null;
         }
         //--//
 
@@ -213,10 +214,6 @@ namespace dev_allocation
             about.MdiParent = this;
             about.Show();
         }
-
-
-
-
         //--//
     }
 }

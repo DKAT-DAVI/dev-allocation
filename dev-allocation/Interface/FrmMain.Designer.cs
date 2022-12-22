@@ -142,7 +142,7 @@
             this.tmnuExit.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.tmnuExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(255)))));
             this.tmnuExit.Name = "tmnuExit";
-            this.tmnuExit.Size = new System.Drawing.Size(102, 22);
+            this.tmnuExit.Size = new System.Drawing.Size(180, 22);
             this.tmnuExit.Text = "Exit";
             this.tmnuExit.Click += new System.EventHandler(this.tmnuExit_Click);
             // 

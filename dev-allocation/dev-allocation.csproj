@@ -110,6 +110,12 @@
     <Compile Include="Interface\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\FrmAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\FrmAllocation.Designer.cs">
+      <DependentUpon>FrmAllocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Data\Models\Task.cs" />
     <EmbeddedResource Include="Interface\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\FrmAllocation.resx">
+      <DependentUpon>FrmAllocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

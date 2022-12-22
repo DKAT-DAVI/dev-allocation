@@ -92,17 +92,17 @@ namespace dev_allocation
                 //--//
 
                 //-- Taks
-                Task t1 = new Task("Trabalhar na construção completa do Sistema", a1);
-                Task t2 = new Task("Fazer a modelagem do banco de dados", a1);
+                Task t1 = new Task("Trabalhar na construção completa do Sistema");
+                Task t2 = new Task("Fazer a modelagem do banco de dados");
 
-                Task t3 = new Task("Fazer a parte gráfica do sistema", a2);
-                Task t4 = new Task("Fazer o backend da aplicação", a2);
+                Task t3 = new Task("Fazer a parte gráfica do sistema");
+                Task t4 = new Task("Fazer o backend da aplicação");
 
-                Task t5 = new Task("Trabalhar na construção completa do Sistema", a3);
-                Task t6 = new Task("Fazer a modelagem do banco de dados", a3);
+                Task t5 = new Task("Trabalhar na construção completa do Sistema");
+                Task t6 = new Task("Fazer a modelagem do banco de dados");
 
-                Task t7 = new Task("Fazer a parte gráfica do sistema", a4);
-                Task t8 = new Task("Fazer o backend da aplicação", a4);
+                Task t7 = new Task("Fazer a parte gráfica do sistema");
+                Task t8 = new Task("Fazer o backend da aplicação");
                 //--//
 
                 //-- Relationship Alocation - Developer
@@ -143,6 +143,20 @@ namespace dev_allocation
                 
                 a6.Project = p2;
                 p2.Allocations.Add(a6);
+                //--//
+
+                //-- Relationship Alocation - Project
+                a1.Tasks.Add(t1);
+                a1.Tasks.Add(t2);
+
+                a2.Tasks.Add(t3);
+                a2.Tasks.Add(t4);
+
+                a3.Tasks.Add(t5);
+                a3.Tasks.Add(t6);
+
+                a4.Tasks.Add(t7);
+                a5.Tasks.Add(t8);
                 //--//
 
                 // Saving Developers
