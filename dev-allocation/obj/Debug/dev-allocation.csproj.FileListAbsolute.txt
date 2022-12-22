@@ -253,4 +253,4 @@ G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocati
 G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.csproj.CopyComplete
 G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.exe
 G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev-allocation.pdb
-G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.Interface.MDIParent1.resources
+G:\WINDOWS\Repositorys\dkat\dev-allocation\dev-allocation\obj\Debug\dev_allocation.Interface.FrmBase.resources

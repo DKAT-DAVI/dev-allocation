@@ -17,7 +17,7 @@ namespace dev_allocation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(FrmLogin.GetInstance());
+            Application.Run(FrmBase.GetInstance());
         }
     }
 }
